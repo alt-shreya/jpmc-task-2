@@ -218,7 +218,7 @@ def get(req_handler, routes):
                 return
 
 
-def run(routes, host='0.0.0.0', port=8080):
+def run(routes, host='0.0.0.0', port=5000):
     """ Runs a class as a server whose methods have been decorated with
         @route.
     """
@@ -234,7 +234,7 @@ def run(routes, host='0.0.0.0', port=8080):
     thread = threading.Thread(target=server.serve_forever)
     thread.daemon = True
     thread.start()
-    print('HTTP server started on port 8080')
+    print('HTTP server started on port 5000')
     while True:
         from time import sleep
         sleep(1)
@@ -328,7 +328,7 @@ class App(object):
                     'price': asks2[0][0],
                     'size': asks2[0][1]
                 }
-            }]
+        }]
 
 
 ################################################################################
